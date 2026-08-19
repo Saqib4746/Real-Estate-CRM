@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --color-emerald: #0F766E;
+  --color-emerald-dark: #0D3330;
+  --color-emerald-light: #CCFBF1;
+  --color-royal-blue: #2563EB;
+  --color-gold: #C9A227;
+  --color-gold-light: #FEF3C7;
+  --color-sidebar-bg: #0A2E2B;
+  --color-sidebar-hover: #143D38;
+  --color-sidebar-active: #0F766E;
+}
+
+/* Live brand theme — updated at runtime from Settings > Theme.
+   Everything in the app that should follow the chosen theme color
+   reads these two variables instead of a hardcoded hex value. */
+:root {
+  --brand: #0F766E;
+  --brand-light: #0D9488;
+}
+
+html, body {
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #94A3B8; }
+
+/* Sidebar scrollbar invisible */
+.sidebar-scroll::-webkit-scrollbar { width: 0; }
+
+/* Smooth transitions */
+* { transition-property: background-color, border-color, color, box-shadow; transition-duration: 150ms; transition-timing-function: ease; }
+
+/* Remove outline on non-keyboard focus */
+:focus:not(:focus-visible) { outline: none; }
+
+/* Plot map grid cells */
+.plot-cell {
+  cursor: pointer;
+  transition: transform 100ms ease, box-shadow 100ms ease;
+  border-radius: 3px;
+}
+.plot-cell:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  z-index: 10;
+  position: relative;
+}
+
+/* Glass card */
+.glass-card {
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Premium table */
+.premium-table th {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #64748B;
+  padding: 12px 16px;
+  background: #F8FAFC;
+  border-bottom: 1px solid #E2E8F0;
+}
+.premium-table td {
+  padding: 13px 16px;
+  border-bottom: 1px solid #F1F5F9;
+  font-size: 0.875rem;
+  color: #1E293B;
+}
+.premium-table tr:last-child td { border-bottom: none; }
+.premium-table tr:hover td { background: #F8FAFC; }
+
+/* Stat card shimmer animation */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Notification badge pulse */
+@keyframes pulse-ring {
+  0% { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+/* Toast slide-in — used by the app-wide toast notification system */
+@keyframes toast-slide-in {
+  from { transform: translateX(24px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+.toast-slide-in {
+  animation: toast-slide-in 220ms ease-out;
+}
+
+/* Login page fade/rise-in */
+@keyframes login-rise-in {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.login-rise-in {
+  animation: login-rise-in 400ms ease-out;
+}
+
+/* ============================================================
+   Dark Mode
+   Toggled via Settings > Theme, applies a `dark` class to <html>.
+   Tailwind utilities aren't configured with a dark: variant here, so
+   this repaints the utility classes actually used across the app —
+   surfaces, text, and borders — while leaving semantic status colors
+   (available/booked/sold, success/error) legible on dark backgrounds.
+   ============================================================ */
+html.dark, .dark body {
+  background-color: #0B1220;
+  color-scheme: dark;
+}
+
+/* Surfaces */
+.dark .bg-white { background-color: #1A2333 !important; }
+.dark .bg-slate-50 { background-color: #0F1626 !important; }
+.dark .bg-slate-100 { background-color: #263145 !important; }
+.dark .bg-slate-200 { background-color: #334155 !important; }
+.dark .bg-slate-400 { background-color: #475569 !important; }
+.dark .bg-slate-600 { background-color: #94A3B8 !important; }
+.dark .bg-slate-700 { background-color: #CBD5E1 !important; }
+.dark .bg-slate-900 { background-color: #E2E8F0 !important; }
+
+/* Text */
+.dark .text-slate-900 { color: #F8FAFC !important; }
+.dark .text-slate-800 { color: #F1F5F9 !important; }
+.dark .text-slate-700 { color: #E2E8F0 !important; }
+.dark .text-slate-600 { color: #CBD5E1 !important; }
+.dark .text-slate-500 { color: #94A3B8 !important; }
+.dark .text-slate-400 { color: #7688A3 !important; }
+.dark .text-slate-300 { color: #5B6B85 !important; }
+.dark .text-slate-200 { color: #334155 !important; }
+
+/* Borders */
+.dark .border-slate-50 { border-color: #1A2333 !important; }
+.dark .border-slate-100 { border-color: #263145 !important; }
+.dark .border-slate-200 { border-color: #334155 !important; }
+.dark .border-slate-300 { border-color: #475569 !important; }
+
+/* Tinted status badges/alerts — lighten the text and give the pale
+   Tailwind-50 background some actual contrast against a dark surface. */
+.dark .bg-emerald-50 { background-color: rgba(16, 185, 129, 0.15) !important; }
+.dark .bg-blue-50 { background-color: rgba(37, 99, 235, 0.18) !important; }
+.dark .bg-red-50 { background-color: rgba(239, 68, 68, 0.16) !important; }
+.dark .bg-amber-50 { background-color: rgba(245, 158, 11, 0.16) !important; }
+.dark .bg-green-50 { background-color: rgba(34, 197, 94, 0.16) !important; }
+.dark .text-emerald-700 { color: #6EE7B7 !important; }
+.dark .text-emerald-800 { color: #6EE7B7 !important; }
+.dark .text-blue-700 { color: #93C5FD !important; }
+.dark .text-blue-600 { color: #93C5FD !important; }
+.dark .text-amber-700 { color: #FCD34D !important; }
+.dark .text-amber-600 { color: #FCD34D !important; }
+.dark .text-red-700 { color: #FCA5A5 !important; }
+.dark .text-red-600 { color: #FCA5A5 !important; }
+.dark .text-red-500 { color: #FCA5A5 !important; }
+
+/* Inputs, selects, textareas */
+.dark input, .dark select, .dark textarea {
+  background-color: transparent;
+  color: #F1F5F9;
+}
+.dark input::placeholder, .dark textarea::placeholder { color: #64748B; }
+
+/* Shadows read as pure black glare on dark surfaces — soften them */
+.dark .shadow-sm, .dark .shadow, .dark .shadow-lg, .dark .shadow-xl, .dark .shadow-2xl {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Premium table */
+.dark .premium-table th { background: #0F1626; color: #94A3B8; border-bottom-color: #263145; }
+.dark .premium-table td { color: #E2E8F0; border-bottom-color: #263145; }
+.dark .premium-table tr:hover td { background: #1F2937; }
+
+/* Backdrop blur behind modals stays black in both modes, no change needed */

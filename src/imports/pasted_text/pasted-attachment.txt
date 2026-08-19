@@ -1,0 +1,645 @@
+Based on your project brief and the new requirements, this should feel like a premium real estate CRM similar to Bahria Town, DHA, Blue World City, or Capital Smart City—not a generic admin panel. Your project already includes inventory, bookings, payments, investors, and receipts. 
+
+Below is a **complete AI prompt for Figma AI / Figma Make**.
+
+---
+
+# Premium Real Estate Plot Sales & Society Management System
+
+**Prompt**
+
+Design a **modern premium web application** for a Pakistani Real Estate Plot & Investor Management System.
+
+The UI must look like a high-end SaaS platform similar to Stripe Dashboard, Linear, Notion Enterprise, or Salesforce, with elegant spacing, soft shadows, glassmorphism, and subtle gradients.
+
+## Theme
+
+Use an elegant premium color palette.
+
+Primary Color:
+Deep Emerald Green (#0F766E)
+
+Secondary:
+Royal Blue (#2563EB)
+
+Accent:
+Luxury Gold (#C9A227)
+
+Background:
+Off White (#F8FAFC)
+
+Cards:
+White with soft shadow
+
+Typography:
+Inter
+
+Rounded Corners:
+16px
+
+Icons:
+Lucide
+
+Animations:
+Smooth hover effects
+Micro interactions
+Soft transitions
+Premium loading skeletons
+
+The interface should look expensive and luxurious.
+
+---
+
+# Sidebar
+
+Dashboard
+
+Societies
+
+Inventory
+
+Bookings
+
+Customers
+
+Payments
+
+Dealers
+
+Investors
+
+Map View
+
+Reports
+
+Settings
+
+---
+
+# Dashboard
+
+Design a beautiful dashboard showing
+
+Total Societies
+
+Available Plots
+
+Booked Plots
+
+Sold Plots
+
+Total Revenue
+
+Pending Payments
+
+Monthly Sales
+
+Recent Bookings
+
+Recent Payments
+
+Payment Reminder Widget
+
+Today's Follow Ups
+
+Recent Activity Timeline
+
+Revenue Chart
+
+Booking Chart
+
+Payment Collection Chart
+
+Top Selling Society
+
+Latest Notifications
+
+---
+
+# Society Management
+
+Dealer should be able to create unlimited societies.
+
+Every society contains
+
+Society Name
+
+Developer Name
+
+Logo
+
+Banner
+
+Address
+
+City
+
+Country
+
+Google Maps Location
+
+Master Plan
+
+Status
+
+Description
+
+Number of Blocks
+
+Number of Plots
+
+Society Theme Color
+
+Dealer can create
+
+Multiple Societies
+
+Multiple Blocks
+
+Multiple Plot Categories
+
+Each society should have
+
+Custom Branding
+
+Separate Logo
+
+Separate Color Theme
+
+Separate Map
+
+---
+
+# Block Management
+
+Inside every society
+
+Dealer can create unlimited blocks
+
+Example
+
+Block A
+
+Block B
+
+Executive Block
+
+Commercial Block
+
+Overseas Block
+
+VIP Block
+
+Each block contains
+
+Number of plots
+
+Plot categories
+
+Road Size
+
+Park
+
+Mosque
+
+Commercial Area
+
+Status
+
+---
+
+# Plot Management
+
+Every plot should contain
+
+Plot Number
+
+Size
+
+Category
+
+Price
+
+Facing
+
+Corner
+
+Extra Land
+
+Block
+
+Society
+
+Status
+
+Available
+
+Booked
+
+Sold
+
+Reserved
+
+Cancelled
+
+Owner Details
+
+Booking Details
+
+Payment Status
+
+Installment Plan
+
+---
+
+# Interactive Society Map
+
+One of the main modules should be an interactive map.
+
+Every society contains a master map.
+
+Dealer uploads society map.
+
+Then plots are drawn on top of the map.
+
+Every plot is clickable.
+
+Color Coding
+
+Green = Available
+
+Yellow = Booked
+
+Red = Sold
+
+Blue = Reserved
+
+Grey = Cancelled
+
+Clicking a plot opens
+
+Plot Details
+
+Customer
+
+Booking
+
+Payment Status
+
+Remaining Balance
+
+Documents
+
+Dealer can zoom
+
+Pan
+
+Search Plot
+
+Filter by Block
+
+Filter by Size
+
+Filter by Status
+
+Real-time color updates.
+
+Whenever a plot is sold, it automatically changes from Green to Red.
+
+Booked plots instantly become Yellow.
+
+This should look similar to Google Maps but for society plots.
+
+---
+
+# Booking Form
+
+Design a premium booking form.
+
+Header contains
+
+Primary Company Logo on left
+
+Society Logo on right
+
+Booking Title
+
+Booking Number
+
+QR Code
+
+Fields
+
+Customer Picture
+
+Customer CNIC Front
+
+Customer CNIC Back
+
+Dealer Photo
+
+Nominee Photo
+
+Customer Signature
+
+Digital Signature Pad
+
+Upload Documents
+
+Drag & Drop Upload
+
+Take Photo using Camera
+
+Upload Multiple Images
+
+Customer Information
+
+Full Name
+
+Father Name
+
+CNIC
+
+Date of Birth
+
+Phone
+
+WhatsApp
+
+Email
+
+Address
+
+Occupation
+
+Nominee Information
+
+Society Information
+
+Block
+
+Plot Number
+
+Plot Size
+
+Category
+
+Facing
+
+Price
+
+Discount
+
+Down Payment
+
+Installment Plan
+
+Monthly Installment
+
+Booking Date
+
+Possession Date
+
+Agent
+
+Dealer
+
+Notes
+
+Attachments
+
+Terms & Conditions
+
+Customer Signature
+
+Dealer Signature
+
+Generate PDF Button
+
+Print Button
+
+Save Booking
+
+---
+
+# Customer Profile
+
+Customer Image
+
+CNIC Images
+
+All Documents
+
+Purchased Plots
+
+Installments
+
+Receipts
+
+Booking History
+
+Payment Timeline
+
+Transfer History
+
+Activity Log
+
+---
+
+# Payment Module
+
+Beautiful payment dashboard.
+
+Outstanding Balance
+
+Paid Amount
+
+Next Due Date
+
+Remaining Installments
+
+Late Payments
+
+Generate Receipt
+
+Print Receipt
+
+WhatsApp Receipt
+
+SMS Receipt
+
+Download PDF
+
+---
+
+# Dealer Panel
+
+Dealer Profile
+
+Assigned Societies
+
+Assigned Customers
+
+Bookings
+
+Commission
+
+Performance
+
+Sales Statistics
+
+Monthly Targets
+
+---
+
+# Investor Module
+
+Investor Dashboard
+
+Investment
+
+Profit
+
+ROI
+
+Projects
+
+Profit Distribution
+
+Charts
+
+---
+
+# Reports
+
+Society Wise Sales
+
+Dealer Wise Sales
+
+Monthly Revenue
+
+Installments Due
+
+Defaulters
+
+Payment Collection
+
+Available Inventory
+
+Sold Inventory
+
+Export PDF
+
+Export Excel
+
+---
+
+# Search
+
+Global Search
+
+Search Customer
+
+Search Plot
+
+Search Booking
+
+Search Society
+
+Search Dealer
+
+Search Payment
+
+---
+
+# Notifications
+
+Payment Due
+
+Booking Completed
+
+Plot Sold
+
+Installment Received
+
+Transfer Completed
+
+New Customer
+
+---
+
+# Settings
+
+Company Profile
+
+Primary Logo
+
+Society Logos
+
+Theme
+
+Taxes
+
+Receipt Template
+
+Letterhead
+
+Users
+
+Backup
+
+---
+
+# Premium Components
+
+Large Data Tables
+
+Floating Search
+
+Advanced Filters
+
+Modern Cards
+
+Interactive Charts
+
+Gradient Headers
+
+Timeline Components
+
+Kanban View
+
+Calendar View
+
+Analytics Widgets
+
+Map Widgets
+
+Floating Action Button
+
+Quick Create Menu
+
+Dark Mode
+
+Light Mode
+
+Glass Cards
+
+Luxury Shadows
+
+---
+
+# UX Requirements
+
+Follow an 8px spacing system.
+
+Design should be clean, spacious, and highly professional.
+
+Use minimal gradients with emerald green, royal blue, and gold accents.
+
+Avoid bright colors, cartoonish icons, and clutter.
+
+Maintain consistency across all screens.
+
+Use premium card layouts, modern tables, elegant typography, and smooth interactions.
+
+The final prototype should feel like a production-ready enterprise real estate management platform suitable for developers, dealers, investors, and sales teams, with a special focus on **multi-society management**, **interactive color-coded plot maps**, and a **professional booking form supporting logos, image uploads, camera capture, and document management**.
