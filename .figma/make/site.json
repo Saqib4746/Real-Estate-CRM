@@ -1,0 +1,14 @@
+{
+  "title": "Al-Khidmat Gujjar Real Estate — Society Management",
+  "description": "Manage societies, plots, bookings, payments, dealers and investors for Al-Khidmat Gujjar Real Estate.",
+  "icons": {
+    "icon": "/favicon.svg"
+  },
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
